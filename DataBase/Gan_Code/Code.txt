@@ -1,0 +1,34 @@
+To open YouTube in Python, you can use the `webbrowser` module. This module provides a function called `open()`, which opens the specified URL in the default web browser of your system.
+
+Here is a simple code example:
+
+```python
+import webbrowser
+
+# Open YouTube in the default web browser
+webbrowser.open("https://www.youtube.com")
+```
+
+You can also use the `webbrowser` module to open a specific YouTube video. To do this, simply pass the URL of the video to the `open()` function.
+
+For example, the following code would open the YouTube video with the ID `dQw4w9WgXcQ`:
+
+```python
+import webbrowser
+
+# Open the YouTube video with the ID "dQw4w9WgXcQ"
+webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+```
+
+You can also use the `webbrowser` module to open multiple YouTube videos at once. To do this, simply pass a list of URLs to the `open()` function.
+
+For example, the following code would open the two YouTube videos with the IDs `dQw4w9WgXcQ` and `9bZkp7qj19I`:
+
+```python
+import webbrowser
+
+# Open the two YouTube videos with the IDs "dQw4w9WgXcQ" and "9bZkp7qj19I"
+webbrowser.open(["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "https://www.youtube.com/watch?v=9bZkp7qj19I"])
+```
+
+I hope this helps!

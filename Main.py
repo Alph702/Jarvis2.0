@@ -126,6 +126,11 @@ def TaskExe():
             elif 'update' in query:
                 from Features import update
                 update()
+            
+            elif 'take a break':
+                Speak("Ok sir I am going to charge.")
+                Speak("You will call me any time just say 'wake up Jarvis'")
+                break
 
             elif 'quit' in query: # for closeing jarvis 
                 break

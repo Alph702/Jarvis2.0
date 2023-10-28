@@ -1,6 +1,8 @@
-import Main as jarvis
+import os
+import eel
 
-if __name__ == "__main__":
-    
-    jarvis.greet()
-    jarvis.Jarvis()###
+os.startfile("Main.py")
+
+eel.init("www")
+os.system('start chrome.exe --app="http://localhost:8000/index.html"')
+eel.start("index.html", mode=None, host='localhost', block=True)

@@ -92,7 +92,7 @@ def TaskExe():
                 YouTubeSaerch(query)
 
 
-            if 'download' in query: # ToDo: Beter video qolity from youtube (✓)
+            elif 'download' in query: # ToDo: Beter video qolity from youtube (✓)
                 from Features import DownloadYouTube
                 DownloadYouTube()
 
@@ -123,17 +123,16 @@ def TaskExe():
                 from Features import Tall
                 Tall()
 
+            elif 'set up my python' in query:
+                from Features import Python_Setup
+                Speak("Enter a project folder name")
+                us = input("Enter a project folder name: ")
+                Python_Setup(str(us))
+            
+
             elif 'update' in query:
                 from Features import update
                 update()
-            
-            elif 'take a break':
-                Speak("Ok sir I am going to charge.")
-                Speak("You will call me any time just say 'wake up Jarvis'")
-                break
-
-            elif 'quit' in query: # for closeing jarvis 
-                break
 
             else: # if i say Nothing to jarvis it print None
                 print(None)
@@ -164,3 +163,9 @@ def greet():
         Speak("Good Evening Sir..",rate = 150)
     else:
         Speak("Good Night Sir..",rate = 80)
+
+
+
+if __name__ == '__main__':
+    greet()
+    TaskExe()

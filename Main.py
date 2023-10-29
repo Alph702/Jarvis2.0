@@ -119,7 +119,7 @@ def TaskExe():
                 from Features import Remember
                 Remember(query=query)
             
-            elif 'tell' in query:
+            if 'tell' in query:
                 from Features import Tall
                 Tall()
 

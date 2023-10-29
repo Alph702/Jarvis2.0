@@ -123,13 +123,12 @@ def TaskExe():
                 from Features import Tall
                 Tall()
 
-            elif 'set up my python' in query:
+            elif 'set up my python' or 'my python setup' or 'my python set up' in query:
                 from Features import Python_Setup
                 Speak("Enter a project folder name")
                 us = input("Enter a project folder name: ")
                 Python_Setup(str(us))
             
-
             elif 'update' in query:
                 from Features import update
                 update()

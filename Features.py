@@ -154,48 +154,38 @@ def Tall():
 
 def update():
     os.startfile("F:\\Code\\Jarvis all in one\\Jarvis2.0\\DataBase\\Extracode\\update.pyw")
-    pag.hotkey('win','5')
-    pag.click(x=1266, y=0)
+    quit()
 
-def Python_Setup(foldername):
-    def createFolder(foldername):
-        pag.click(x=217, y=791)
-        sleep(7)
-        pag.doubleClick(x=839, y=366,interval=0.2)
-        sleep(1)
-        pag.doubleClick(x=219, y=257,interval=0.2)
-        sleep(1)
-        pag.doubleClick(x=1024, y=242,interval=0.2)
-        sleep(1)
-        pag.click(x=487, y=105)
-        sleep(1)
-        pag.write(foldername,0.5)
-        sleep(0.5)
-        pag.keyDown('return')
-        pag.keyUp('return')
-        sleep(0.5)
-        pag.keyDown('return')
-        pag.keyUp('return')
-        sleep(1)
-        pag.click(x=505, y=157)
-        sleep(0.5)
-        pag.write("cmd",interval=0.2)
-        sleep(0.5)
-        pag.keyDown('return')
-        pag.keyUp('return')
-        sleep(0.5)
-        pag.write("code .")
-        sleep(0.5)
-        pag.keyDown('return')
-        pag.keyUp('return')
+def vocab():
+    from datetime import date
+    today = date.today()
+    with open("F:\\Code\\Jarvis all in one\\Jarvis2.0\\vocabulary word.txt", 'r') as f:
+        notification_title = f.read()
+    
+    with open("F:\\Code\\Jarvis all in one\\Jarvis2.0\\vocabulary def.txt", 'r') as f:
+        notification_message = f.read()
+    def notifyer():
+        from plyer import notification 
+        try:
+            notification.notify(  
+                title = notification_title,
+                message = str(notification_message[:200]),
+                timeout = 10,  
+                # toast = False
+                )
+        except Exception as e:
+            print(e)
+        
+        with open("F:\\Code\\Jarvis all in one\\Jarvis2.0\\date.txt",'w') as f:
+            f.write(str(today))
 
-    def openmiro():
-        web.open("https://miro.com/app")
-        sleep(60)
-        pag.click(x=506, y=323)
-        sleep(4)
-        pag.click(x=552, y=589)
 
-    createFolder(foldername=foldername)
-    sleep(60)
-    openmiro()
+    with open("F:\\Code\\Jarvis all in one\\Jarvis2.0\\date.txt",'r') as _date_:
+        date_ = _date_.read()
+    if date_ != str(today):
+        os.startfile("F:\\Code\\Jarvis all in one\\Jarvis2.0\\DataBase\\Extracode\\vocablory.py")
+        sleep(5)
+        notifyer()
+        Speak(f"Today's word is {notification_title} and it definition is {notification_message}")
+    else:
+        pass

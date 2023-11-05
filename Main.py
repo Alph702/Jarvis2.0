@@ -65,9 +65,11 @@ def TakeCommand_hi():
 
 def TaskExe():
     try:
-        os.startfile("F:\\Code\\Jarvis all in one\\Jarvis2.0\\DataBase\\Extracode\\Water.pyw") # I open water reminder
+        os.startfile("F:\\Code\\Jarvis all in one\\Jarvis2.0\\DataBase\\Extracode\\Water.py") # I open water reminder
     except Exception as e:
-        Speak("Sorry I Think The path is not recognised please report the bug.")
+        Speak(e)
+    from Features import vocab
+    vocab()
 
     while True:
         try:
@@ -119,19 +121,22 @@ def TaskExe():
                 from Features import Remember
                 Remember(query=query)
             
-            if 'tell' in query:
+            elif 'tell' in query:
                 from Features import Tall
                 Tall()
 
-            elif 'set up my python' or 'my python setup' or 'my python set up' in query:
-                from Features import Python_Setup
-                Speak("Enter a project folder name")
-                us = input("Enter a project folder name: ")
-                Python_Setup(str(us))
+            elif 'my python setup' in query:
+                python_setup_flag = False
+                if not python_setup_flag:
+                    python_setup_flag = True
+                    os.startfile("F:\\Code\\Jarvis all in one\\Jarvis2.0\\DataBase\\Extracode\\pythonSetup.py")
             
             elif 'update' in query:
                 from Features import update
                 update()
+            
+            elif 'exit' in query:
+                quit()
 
             else: # if i say Nothing to jarvis it print None
                 print(None)

@@ -9,3 +9,14 @@ plyer==1.2.2
 keyboard
 pyperclip
 pytube
+ell
+datetime
+playsound
+bardapi
+webbrowser
+time
+os
+requests
+BeautifulSoup4
+PyQt5
+speedtest

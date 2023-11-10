@@ -1,16 +1,29 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400&family=Roboto+Condensed&display=swap');
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: black;
 }
 
-#bg{
+.gifs img {
     height: 100vh;
 }
-.gifs{
+
+.gifs {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.gifs span {
+    color: white;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 2vw;
 }

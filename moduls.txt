@@ -9,7 +9,6 @@ plyer==1.2.2
 keyboard
 pyperclip
 pytube
-ell
 datetime
 playsound
 bardapi

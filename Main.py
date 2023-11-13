@@ -5,14 +5,15 @@ import os
 
 ####### SPEAK #########
 
-def Speak(audio,rate : int = 170):
+def Speak(audio,rate : int = 170, text : bool = True):
     engine = p3.init('sapi5')
     voices = engine.getProperty('voices')
     engine.setProperty('voices',voices[0].id)
     engine.setProperty('rate',rate)
-    print("  ")
-    print(f"AI : {audio}")
-    print("  ")
+    if text == True:
+        print("  ")
+        print(f"AI : {audio}")
+        print("  ")
     engine.say(audio)
     engine.runAndWait()
 

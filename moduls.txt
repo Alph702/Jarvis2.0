@@ -13,8 +13,6 @@ ell
 datetime
 playsound
 bardapi
-webbrowser
-time
 requests
 BeautifulSoup4
 PyQt5

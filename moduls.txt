@@ -16,4 +16,4 @@ requests
 BeautifulSoup4
 PyQt5
 speedtest
-
+eel

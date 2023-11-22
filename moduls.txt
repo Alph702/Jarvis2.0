@@ -9,7 +9,6 @@ plyer==1.2.2
 keyboard
 pyperclip
 pytube
-ell
 datetime
 playsound
 bardapi
@@ -17,4 +16,4 @@ requests
 BeautifulSoup4
 PyQt5
 speedtest
-
+eel
